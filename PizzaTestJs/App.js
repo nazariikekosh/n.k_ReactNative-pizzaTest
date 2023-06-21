@@ -1,14 +1,14 @@
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from  'react-native';
+import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View } from  'react-native';
 import React from 'react';
 
 const App = () => {
     return (
       <SafeAreaView style={{flex: 1}}>
-        {/* {<statusbar barStyle={isDarckMode ? 'light-content' : 'dark-content'} />}  */}
+        <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
         <View style={styles.container}>
-          <View style={styles.view1} />
-          <View style={[styles.view1,{backgroundColor: 'green'}]} />
-          <View style={[styles.view1,{backgroundColor: '#000'}]} />
+          <Text style={styles.text}>
+            Hello World {'\n'} edfwf
+          </Text>
         </View>
       </SafeAreaView>
        
@@ -18,15 +18,16 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
+    paddingHorizontal: 15,
+    paddingVertical: 15,
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'space-between'
   },
 
-  view1: {
-    width: "30%",
-    height: 150,
-    borderRadius: 8,
-    backgroundColor: "red",
+  text: {
+    fontSize: 24,
+    fontWeight: '700',
   }
 
 });
