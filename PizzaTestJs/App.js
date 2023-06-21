@@ -1,5 +1,6 @@
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View, Image } from  'react-native';
 import React from 'react';
+import { CardItem } from './src/components/CardItem';
 
 
 const App = () => {
@@ -14,10 +15,7 @@ const App = () => {
             Опис магазину довжиною {'\n'}в дві строчки:)))
           </Text>
           <View style={styles.imgContainer}>
-          <Image style={styles.image} source={require('./assets/image/pizza.jpg')}/>
-          <Image style={styles.image} source={require('./assets/image/pizza.jpg')}/>
-          <Image style={styles.image} source={require('./assets/image/pizza.jpg')}/>
-          <Image style={styles.image} source={require('./assets/image/pizza.jpg')}/>
+            <CardItem text={'Піцца так собі але дякую за замовлення'} img={require('./assets/image/pizza.jpg')} />
           </View>
         </View>
       </SafeAreaView>
