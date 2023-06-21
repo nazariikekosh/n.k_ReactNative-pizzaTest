@@ -2,12 +2,13 @@ import React from "react";
 import { TouchableOpacity, Image, Text, StyleSheet, Alert} from "react-native";
 
 
-export const CardItem =({text, img}) => {
+export const CardItem =({text, img, price}) => {
 
     return(
-        <TouchableOpacity onPress={()=> Alert.alert(text)} style={styles.btn}>
+        <TouchableOpacity onPress={()=> Alert.alert("Ви вибрали:", text)} style={styles.btn}>
             <Image style={styles.image} source={img}/>
             <Text>{text}</Text>
+            <Text>{price}</Text>
         </TouchableOpacity> 
     )
 }

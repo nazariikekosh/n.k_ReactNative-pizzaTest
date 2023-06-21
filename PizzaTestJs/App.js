@@ -2,6 +2,27 @@ import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View, Image } fr
 import React from 'react';
 import { CardItem } from './src/components/CardItem';
 
+const pizzaData = [
+  {
+      id: 1,
+      name: "Гавайська",
+      price: 250,
+      image: require('./assets/gavaja.webp'),
+  },
+  {
+      id: 2,
+      name: "Пеппероні",
+      price: 270,
+      image: require('./assets/peperoni.webp'),
+  },
+  {
+      id: 3,
+      name: "Барбек'ю",
+      price: 275,
+      image: require('./assets/barberq.webp'),
+  }
+
+]
 
 const App = () => {
     return (
@@ -12,11 +33,12 @@ const App = () => {
             Магазин Піци
           </Text>
           <Text style={styles.textDes}>
-            Босяцький магазин, {'\n'}але піца смачна
+            Тестовий магазин, {'\n'}для замовлення піци
           </Text>
           <View style={styles.imgContainer}>
-            <CardItem text={'Гавайська'} img={require('./assets/gavaja.webp')} />
-            <CardItem text={'Пеппероні'} img={require('./assets/peperoni.webp')} />
+            {pizzaData.map((pizza, index) =>(
+              <CardItem text={pizza.name} img={pizza.image} price={pizza.price}/>
+            ))}
           </View>
         </View>
       </SafeAreaView>
