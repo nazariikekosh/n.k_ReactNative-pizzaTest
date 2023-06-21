@@ -1,5 +1,6 @@
-import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View } from  'react-native';
+import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View, Image } from  'react-native';
 import React from 'react';
+
 
 const App = () => {
     return (
@@ -12,6 +13,12 @@ const App = () => {
           <Text style={styles.textDes}>
             Опис магазину довжиною {'\n'}в дві строчки:)))
           </Text>
+          <View style={styles.imgContainer}>
+          <Image style={styles.image} source={require('./assets/image/pizza.jpg')}/>
+          <Image style={styles.image} source={require('./assets/image/pizza.jpg')}/>
+          <Image style={styles.image} source={require('./assets/image/pizza.jpg')}/>
+          <Image style={styles.image} source={require('./assets/image/pizza.jpg')}/>
+          </View>
         </View>
       </SafeAreaView>
        
@@ -34,8 +41,21 @@ const styles = StyleSheet.create({
 
   textDes: {
     fontSize: 16,
+    marginTop: 15,
     color: 'grey',
-  }
+  },
+  image: {
+    marginTop: 15,
+    width: '45%',
+    height: 180,
+    borderRadius: 14,
+  },
+  imgContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between', 
+    flexWrap: 'wrap',
+  },
 
 });
 
