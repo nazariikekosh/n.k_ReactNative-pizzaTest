@@ -12,10 +12,11 @@ const App = () => {
             Магазин Піци
           </Text>
           <Text style={styles.textDes}>
-            Опис магазину довжиною {'\n'}в дві строчки:)))
+            Босяцький магазин, {'\n'}але піца смачна
           </Text>
           <View style={styles.imgContainer}>
-            <CardItem text={'Піцца так собі але дякую за замовлення'} img={require('./assets/image/pizza.jpg')} />
+            <CardItem text={'Гавайська'} img={require('./assets/gavaja.webp')} />
+            <CardItem text={'Пеппероні'} img={require('./assets/peperoni.webp')} />
           </View>
         </View>
       </SafeAreaView>
@@ -42,12 +43,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     color: 'grey',
   },
-  image: {
-    marginTop: 15,
-    width: '45%',
-    height: 180,
-    borderRadius: 14,
-  },
+  
   imgContainer: {
     display: 'flex',
     flexDirection: 'row',
