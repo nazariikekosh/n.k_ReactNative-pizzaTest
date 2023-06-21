@@ -7,7 +7,10 @@ const App = () => {
         <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
         <View style={styles.container}>
           <Text style={styles.text}>
-            Hello World {'\n'} edfwf
+            Магазин Піци
+          </Text>
+          <Text style={styles.textDes}>
+            Опис магазину довжиною {'\n'}в дві строчки:)))
           </Text>
         </View>
       </SafeAreaView>
@@ -18,16 +21,20 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    paddingTop: 15,
+    backgroundColor: '#fff',
     paddingHorizontal: 15,
-    paddingVertical: 15,
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
   },
 
   text: {
     fontSize: 24,
     fontWeight: '700',
+  },
+
+  textDes: {
+    fontSize: 16,
+    color: 'grey',
   }
 
 });
