@@ -1,29 +1,29 @@
-import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View, Image, TouchableOpacity } from  'react-native';
+import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View, Image, TouchableOpacity, Alert } from  'react-native';
 import React from 'react';
 import { CardItem } from './src/components/CardItem';
 
 const pizzaData = [
   {
       id: 1,
-      name: "Гавайська",
+      name: "Гавайська Вчорашня",
       price: 250,
       image: require('./assets/gavaja.webp'),
   },
   {
       id: 2,
-      name: "Пеппероні",
+      name: "Пеппероні Позавчорашня",
       price: 270,
       image: require('./assets/peperoni.webp'),
   },
   {
       id: 3,
-      name: "Барбек'ю",
+      name: "Барбек'ю Зранку була ще свіжа",
       price: 275,
       image: require('./assets/barberq.webp'),
   },
   {
     id: 1,
-    name: "Гавайська",
+    name: "Гавайська Зранку була ще свіжа",
     price: 250,
     image: require('./assets/gavaja.webp'),
 },
@@ -41,19 +41,19 @@ const pizzaData = [
 },
 {
   id: 1,
-  name: "Гавайська",
+  name: "Гавайська Вчорашня",
   price: 250,
   image: require('./assets/gavaja.webp'),
 },
 {
   id: 2,
-  name: "Пеппероні",
+  name: "Пеппероні Вчорашня",
   price: 270,
   image: require('./assets/peperoni.webp'),
 },
 {
   id: 3,
-  name: "Барбек'ю",
+  name: "Барбек'ю Зранку була ще свіжа",
   price: 275,
   image: require('./assets/barberq.webp'),
 },
@@ -66,17 +66,17 @@ const App = () => {
         <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
         <ScrollView style={styles.container}>
           <Text style={styles.text}>
-            Магазин Піци
+            Магазин Вчорашніх Піц
           </Text>
           <Text style={styles.textDes}>
-            Тестовий магазин, {'\n'}для замовлення піци
+            Недороблений  магазин, {'\n'}недопечених піц
           </Text>
           <View style={styles.imgContainer}>
             {pizzaData.map((pizza, index) =>(
               <CardItem text={pizza.name} img={pizza.image} price={pizza.price } key={index}/>
             ))}
           </View>
-          <TouchableOpacity style={styles.orderBtn}>
+          <TouchableOpacity onPress={()=> Alert.alert("Дякую за замовлення. Термін доставки 4 дні")} style={styles.orderBtn}>
             <Text style={{color: 'white', fontSize: 16, textAlign: 'center', fontWeight: '500'}}>Зробити замовлення</Text>
           </TouchableOpacity>
             
