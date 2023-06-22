@@ -20,7 +20,43 @@ const pizzaData = [
       name: "Барбек'ю",
       price: 275,
       image: require('./assets/barberq.webp'),
-  }
+  },
+  {
+    id: 1,
+    name: "Гавайська",
+    price: 250,
+    image: require('./assets/gavaja.webp'),
+},
+{
+    id: 2,
+    name: "Пеппероні",
+    price: 270,
+    image: require('./assets/peperoni.webp'),
+},
+{
+    id: 3,
+    name: "Барбек'ю",
+    price: 275,
+    image: require('./assets/barberq.webp'),
+},
+{
+  id: 1,
+  name: "Гавайська",
+  price: 250,
+  image: require('./assets/gavaja.webp'),
+},
+{
+  id: 2,
+  name: "Пеппероні",
+  price: 270,
+  image: require('./assets/peperoni.webp'),
+},
+{
+  id: 3,
+  name: "Барбек'ю",
+  price: 275,
+  image: require('./assets/barberq.webp'),
+},
 
 ]
 
@@ -28,7 +64,7 @@ const App = () => {
     return (
       <SafeAreaView style={{flex: 1}}>
         <StatusBar backgroundColor="#fff" barStyle={'dark-content'} />
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
           <Text style={styles.text}>
             Магазин Піци
           </Text>
@@ -37,10 +73,10 @@ const App = () => {
           </Text>
           <View style={styles.imgContainer}>
             {pizzaData.map((pizza, index) =>(
-              <CardItem text={pizza.name} img={pizza.image} price={pizza.price}/>
+              <CardItem text={pizza.name} img={pizza.image} price={pizza.price } key={index}/>
             ))}
           </View>
-        </View>
+        </ScrollView>
       </SafeAreaView>
        
     );
