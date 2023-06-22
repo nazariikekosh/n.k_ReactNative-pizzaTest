@@ -1,4 +1,4 @@
-import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View, Image } from  'react-native';
+import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View, Image, TouchableOpacity } from  'react-native';
 import React from 'react';
 import { CardItem } from './src/components/CardItem';
 
@@ -76,6 +76,10 @@ const App = () => {
               <CardItem text={pizza.name} img={pizza.image} price={pizza.price } key={index}/>
             ))}
           </View>
+          <TouchableOpacity style={styles.orderBtn}>
+            <Text style={{color: 'white', fontSize: 16, textAlign: 'center', fontWeight: '500'}}>Зробити замовлення</Text>
+          </TouchableOpacity>
+            
         </ScrollView>
       </SafeAreaView>
        
@@ -108,6 +112,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between', 
     flexWrap: 'wrap',
   },
+  orderBtn: {
+    marginTop: 15,
+    marginBottom: 30,
+    width: '100%',
+    paddingVertical: 16,
+    backgroundColor: 'orange',
+    borderRadius: 8,
+  }
 
 });
 

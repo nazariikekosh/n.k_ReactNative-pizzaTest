@@ -8,7 +8,7 @@ export const CardItem =({text, img, price}) => {
         <TouchableOpacity onPress={()=> Alert.alert("Ви вибрали:", text)} style={styles.btn}>
             <Image style={styles.image} source={img}/>
             <Text>{text}</Text>
-            <Text>{price}</Text>
+            <Text>{price} грн.</Text>
         </TouchableOpacity> 
     )
 }
